@@ -50,6 +50,39 @@ void Board::reset(){
     }
 }
 
+bool Board::checkVertical(int colNumber, char value){
+    for (int i = 0; i < 9; ++i){
+        if (cell[i][colNumber].getValue() == value){
+            return false;
+        }
+    }
+    return true;
+}
+
+bool Board::checkHorizontal(int rowNumber, char value){
+    for (int i = 0; i < 9; ++i) {
+        if (cell[rowNumber][i].getValue() == value) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool Board::checkRegional(int rowNumber, int colNumber, char value){
+
+
+    int startRow = rowNumber - rowNumber % 3;
+    int startCol = colNumber - colNumber % 3;
+
+    for (int i = startRow; i < startRow + 3; ++i){
+        for (int j = startCol; j < startCol + 3; ++j){
+            if (cell[i][j].getValue() == value){
+                return false;
+            }
+        }
+    }
+}
+
 std::vector<std::vector<Cell>> Board::getBoard() {
     return cell;
 }

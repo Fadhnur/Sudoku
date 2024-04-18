@@ -16,6 +16,10 @@ class Board{
         bool isFull();
 
         void reset();
+
+        bool checkVertical(int colNumber, char value);
+        bool checkHorizontal(int rowNumber, char value);
+        bool checkRegional(int rowNumber, int colNumber, char value);
         
         std::vector<std::vector<Cell>> getBoard();
 };
