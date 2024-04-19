@@ -1,8 +1,4 @@
 #include "Board.h"
-#include <fstream>
-#include <cstdlib>
-#include <ctime>
-#include <algorithm>
 
 Board::Board(){
     cell.resize(9, std::vector<Cell>(9));
@@ -25,6 +21,27 @@ int Board::getValue(int row, int col){
 void Board::setFixed(int row, int col, bool fix){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
         cell[row][col].setFixed(fix);
+    }
+}
+
+void Board::printBoard(){
+    for (int i = 0; i < 9; ++i){
+        if (i % 3 == 0 && i != 0){
+            std::cout << "---------------------" << std::endl;
+        }
+
+        for (int j = 0; j < 9; ++j){
+            if (j % 3 == 0 && j != 0){
+                std::cout << "| ";
+            }
+            if (cell[i][j].getValue() == '0'){
+                std::cout << ". ";
+            }
+            else{
+                std::cout << cell[i][j].getValue() << " ";
+            }
+        }
+        std::cout << std::endl;
     }
 }
 
