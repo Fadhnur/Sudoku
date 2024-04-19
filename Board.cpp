@@ -4,11 +4,16 @@
 #include <ctime>
 #include <algorithm>
 
+Board::Board(){
+    cell.resize(9, std::vector<Cell>(9));
+}
+
 void Board::setValue(int row, int col, int val){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
         cell[row][col].setValue(val);
     }
 }
+
 
 int Board::getValue(int row, int col){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
