@@ -7,6 +7,7 @@ class Board{
         std::vector < std::vector < Cell >> cell;
 
 	public:
+        Board();
         void setValue(int row, int col, int val);
         int getValue(int row, int col);
 

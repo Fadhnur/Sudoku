@@ -3,6 +3,6 @@
 #include <string>
 class Challenge{
 	public:
-		virtual Board loadChallenge(std::string filename);
+		virtual Board loadChallenge();
 };
 
