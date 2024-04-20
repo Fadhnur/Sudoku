@@ -5,7 +5,7 @@
 
 class Board{
 	private:
-        std::vector < std::vector < Cell >> cell;
+        std::vector < std::vector < Cell >> cells;
 
 	public:
         Board();
