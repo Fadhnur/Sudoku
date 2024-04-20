@@ -2,13 +2,12 @@
 //
 
 #include <iostream>
-#include "Easy.h"
-#include "ChallengeLoader.h"
-#include "ChallengeFactory.h"
+#include "GameManager.h"
+#include "Player.h"
 
 int main(){
-    ChallengeFactory a;
-    a.getChallenge("easy")->loadChallenge().printBoard();
+	Player a;
+	GameManager newGame("medium", a);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

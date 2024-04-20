@@ -10,7 +10,7 @@ Board Medium::loadChallenge(){
 	int randomNumber = distribution(gen);
 
 	std::string challenge = std::to_string(randomNumber);
-	std::string path = "E:/Repositories/Sudoku/Challenge/Medium" + challenge + ".txt";
+	std::string path = "E:/Repositories/Sudoku/Challenge/Medium/" + challenge + ".txt";
 
 	return cl.readFileToBoard(path);
 }
