@@ -2,6 +2,7 @@
 #include "Board.h"
 #include "Player.h"
 #include "ChallengeFactory.h"
+
 class GameManager{
 	private:
 		Board challenge;
@@ -19,7 +20,7 @@ class GameManager{
 		Player getPlayer();
 		std::string getLevel();
 
-		void insertNumber(int rowNumber, int colNumber, int value);
+		void insertNumber(int rowNumber, int colNumber, char value);
 		void removeNumber(int rowNumber, int colNumber);
 
 		bool isWin();
