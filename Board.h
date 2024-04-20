@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Cell.h"
+#include <iostream>
 
 class Board{
 	private:
