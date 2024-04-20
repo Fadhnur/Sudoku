@@ -4,14 +4,14 @@ Board::Board(){
     cell.resize(9, std::vector<Cell>(9));
 }
 
-void Board::setValue(int row, int col, int val){
+void Board::setValue(int row, int col, char val){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
         cell[row][col].setValue(val);
     }
 }
 
 
-int Board::getValue(int row, int col){
+char Board::getValue(int row, int col){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
         return cell[row][col].getValue();
     }

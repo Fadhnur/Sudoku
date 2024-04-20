@@ -11,7 +11,7 @@ Board Easy::loadChallenge(){
 	int randomNumber = distribution(gen);
 
 	std::string challenge = std::to_string(randomNumber);
-	std::string path = "E:/Repositories/Sudoku/Challenge/Easy" + challenge + ".txt";
+	std::string path = "E:/Repositories/Sudoku/Challenge/Easy/" + challenge + ".txt";
 
 	return cl.readFileToBoard(path);
 }

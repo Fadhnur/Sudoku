@@ -25,10 +25,15 @@ Board ChallengeLoader::readFileToBoard(const std::string& filename){
 
         // Push each character into the corresponding row of the grid vector
         for (int j = 0; j < 9; ++j) {
+           // std::cout << line[j] << " ";
             output.setValue(i, j, line[j]);
+
+            std::cout << output.getValue(i,j)<< " ";
+
             if (line[j] != '0')
                 output.setFixed(i, j, true);
         }
+        std::cout << std::endl;
     }
 
     file.close(); // Close the file

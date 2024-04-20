@@ -2,7 +2,7 @@
 
 Challenge *ChallengeFactory::getChallenge(std::string level){
 
-	Challenge* output;
+	Challenge* output = NULL;
 
 	std::string input = "";
 
@@ -20,5 +20,7 @@ Challenge *ChallengeFactory::getChallenge(std::string level){
 	else if (input == "hard") {
 		output = new Hard;
 	}
+
+	return output;
 	
 }

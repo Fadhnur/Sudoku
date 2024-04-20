@@ -9,8 +9,8 @@ class Board{
 
 	public:
         Board();
-        void setValue(int row, int col, int val);
-        int getValue(int row, int col);
+        void setValue(int row, int col, char val);
+        char getValue(int row, int col);
 
         void setFixed(int row, int col, bool fix);
         bool isFixed(int row, int col);
@@ -18,6 +18,7 @@ class Board{
         bool isFull();
 
         void reset();
+        void printBoard();
 
         bool checkVertical(int colNumber, char value);
         bool checkHorizontal(int rowNumber, char value);

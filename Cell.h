@@ -6,8 +6,8 @@ class Cell{
 
 	public:
 		Cell();
-		int getValue();
-		void setValue(int val);
+		char getValue();
+		void setValue(char val);
 		bool isFixed();
 		void setFixed(bool fix);
 

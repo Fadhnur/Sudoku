@@ -1,16 +1,15 @@
 #include "Cell.h"
 
 Cell::Cell() {
-    value = 0;
+    value = '0';
     fixed = false;
 }
 
-int Cell::getValue()
-{
+char Cell::getValue(){
     return value;
 }
 
-void Cell::setValue(int val){
+void Cell::setValue(char val){
     value = val;
 }
 

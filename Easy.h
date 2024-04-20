@@ -4,6 +4,7 @@
 #include "ChallengeLoader.h"
 
 class Easy : public Challenge{
-	Board loadChallenge();
+	public:
+		Board loadChallenge();
 };
 
