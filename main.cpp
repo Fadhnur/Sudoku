@@ -2,30 +2,12 @@
 //
 
 #include <iostream>
-#include "GameManager.h"
-#include "Player.h"
 #include "Easy.h"
 #include "ChallengeLoader.h"
 
 int main(){
- /*   Player p;
-    GameManager newGame("easy", p);
-    newGame.getBoard().printBoard();
-    std::cout << "Hello World!\n";
-    */
-	std::random_device rd;
-	std::mt19937 gen(rd());
-
-	std::uniform_int_distribution<> distribution(1, 3);
-	int randomNumber = distribution(gen);
-
-	std::cout << randomNumber << std::endl;
-
-	std::string challenge = std::to_string(randomNumber);
-	std::string path = "E:/Repositories/Sudoku/Challenge/Easy/" + challenge + ".txt";
-
-	ChallengeLoader a;
-	a.readFileToBoard(path).printBoard();
+    Easy a;
+    a.loadChallenge().printBoard();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

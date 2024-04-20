@@ -3,6 +3,6 @@
 #include <string>
 class Challenge{
 	public:
-		virtual Board loadChallenge();
+		virtual Board loadChallenge() = 0;
 };
 
