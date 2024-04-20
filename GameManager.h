@@ -12,7 +12,7 @@ class GameManager{
 		
 		GameManager(std::string lvl, Player plyr);
 
-		void setChallenge();
+		void setLevel(std::string lvl);
 		void setPlayer(Player plyr);
 
 		Board getBoard();

@@ -1,26 +1,26 @@
 #include "Board.h"
 
 Board::Board(){
-    cell.resize(9, std::vector<Cell>(9));
+    cells.resize(9, std::vector<Cell>(9));
 }
 
 void Board::setValue(int row, int col, char val){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
-        cell[row][col].setValue(val);
+        cells[row][col].setValue(val);
     }
 }
 
 
 char Board::getValue(int row, int col){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
-        return cell[row][col].getValue();
+        return cells[row][col].getValue();
     }
     return 0; // Return 0 if coordinates are out of bounds
 }
 
 void Board::setFixed(int row, int col, bool fix){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
-        cell[row][col].setFixed(fix);
+        cells[row][col].setFixed(fix);
     }
 }
 
@@ -34,11 +34,11 @@ void Board::printBoard(){
             if (j % 3 == 0 && j != 0){
                 std::cout << "| ";
             }
-            if (cell[i][j].getValue() == '0'){
+            if (cells[i][j].getValue() == '0'){
                 std::cout << ". ";
             }
             else{
-                std::cout << cell[i][j].getValue() << " ";
+                std::cout << cells[i][j].getValue() << " ";
             }
         }
         std::cout << std::endl;
@@ -47,7 +47,7 @@ void Board::printBoard(){
 
 bool Board::isFixed(int row, int col){
     if (row >= 0 && row < 9 && col >= 0 && col < 9){
-        return cell[row][col].isFixed();
+        return cells[row][col].isFixed();
     }
     return false; // Return false if coordinates are out of bounds
 }
@@ -55,7 +55,7 @@ bool Board::isFixed(int row, int col){
 bool Board::isFull(){
     for (int i = 0; i < 9; ++i){
         for (int j = 0; j < 9; ++j){
-            if (cell[i][j].getValue() == 0){
+            if (cells[i][j].getValue() == '0'){
                 return false;
             }
         }
@@ -66,15 +66,15 @@ bool Board::isFull(){
 void Board::reset(){
     for (int i = 0; i < 9; ++i){
         for (int j = 0; j < 9; ++j){
-            cell[i][j].setValue(0);
-            cell[i][j].setFixed(false);
+            cells[i][j].setValue(0);
+            cells[i][j].setFixed(false);
         }
     }
 }
 
 bool Board::checkVertical(int colNumber, char value){
     for (int i = 0; i < 9; ++i){
-        if (cell[i][colNumber].getValue() == value){
+        if (cells[i][colNumber].getValue() == value){
             return false;
         }
     }
@@ -83,7 +83,7 @@ bool Board::checkVertical(int colNumber, char value){
 
 bool Board::checkHorizontal(int rowNumber, char value){
     for (int i = 0; i < 9; ++i) {
-        if (cell[rowNumber][i].getValue() == value) {
+        if (cells[rowNumber][i].getValue() == value) {
             return false;
         }
     }
@@ -98,7 +98,7 @@ bool Board::checkRegional(int rowNumber, int colNumber, char value){
 
     for (int i = startRow; i < startRow + 3; ++i){
         for (int j = startCol; j < startCol + 3; ++j){
-            if (cell[i][j].getValue() == value){
+            if (cells[i][j].getValue() == value){
                 return false;
             }
         }
@@ -106,6 +106,6 @@ bool Board::checkRegional(int rowNumber, int colNumber, char value){
 }
 
 std::vector<std::vector<Cell>> Board::getBoard() {
-    return cell;
+    return cells;
 }
 
