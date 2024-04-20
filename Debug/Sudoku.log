@@ -1,2 +1,5 @@
-﻿  ChallengeLoader.cpp
+﻿  ChallengeFactory.cpp
+  GameManager.cpp
+  main.cpp
+  Generating Code...
   Sudoku.vcxproj -> E:\Repositories\Sudoku\Debug\Sudoku.exe

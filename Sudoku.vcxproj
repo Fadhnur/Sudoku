@@ -142,6 +142,7 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="Challenge.cpp" />
+    <ClCompile Include="ChallengeFactory.cpp" />
     <ClCompile Include="ChallengeLoader.cpp" />
     <ClCompile Include="Easy.cpp" />
     <ClCompile Include="GameManager.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Challenge.h" />
+    <ClInclude Include="ChallengeFactory.h" />
     <ClInclude Include="ChallengeLoader.h" />
     <ClInclude Include="Easy.h" />
     <ClInclude Include="GameManager.h" />

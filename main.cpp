@@ -4,10 +4,11 @@
 #include <iostream>
 #include "Easy.h"
 #include "ChallengeLoader.h"
+#include "ChallengeFactory.h"
 
 int main(){
-    Easy a;
-    a.loadChallenge().printBoard();
+    ChallengeFactory a;
+    a.getChallenge("easy")->loadChallenge().printBoard();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
