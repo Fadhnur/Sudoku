@@ -8,6 +8,7 @@
 int main(){
 	Player a;
 	GameManager newGame("medium", a);
+	newGame.getBoard().printBoard();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
