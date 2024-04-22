@@ -11,10 +11,9 @@ RemoveNumber::RemoveNumber(int row, int col, char val, Board* chlg) {
 }
 
 void RemoveNumber::undo() {
-	std::cout << "Undo is called from Remove Number" << std::endl;
+	challenge->setValue(rowNumber, colNumber, value);
 }
 
 void RemoveNumber::execute() {
-	std::cout << "Redo is called from Remove Number" << std::endl;
+	challenge->setValue(rowNumber, colNumber, '0');
 }
-

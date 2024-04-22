@@ -22,10 +22,24 @@ int main(){
 	InsertNumber one(1, 2, '3', h);
 	Command *c = & one;
 
+	RemoveNumber two(0, 2, h->getValue(0, 2), h);
+	Command* d = &two;
+
 	CommandList newCommand;
 	newCommand.PutCommand(c);
+	newCommand.PutCommand(d);
 
 	Command* e = newCommand.takeCommand();
+	e->execute();
+	std::cout << "Execute " << std::endl << std::endl;
+	h->printBoard();
+	e->undo();
+	std::cout << "Undo " << std::endl << std::endl;
+	h->printBoard();
+
+	std::cout << "Board asli " << std::endl << std::endl;
+
+	e = newCommand.takeCommand();
 	e->execute();
 	std::cout << "Execute " << std::endl << std::endl;
 	h->printBoard();

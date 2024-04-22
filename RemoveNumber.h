@@ -9,6 +9,7 @@ private:
 
 public:
 	RemoveNumber();
+	RemoveNumber(int row, int col, char val, Board* chlg);
 	void undo();
 	void execute();
 };
