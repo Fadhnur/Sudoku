@@ -148,9 +148,11 @@
     <ClCompile Include="Easy.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Hard.cpp" />
+    <ClCompile Include="InsertNumber.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Medium.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RemoveNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
@@ -162,8 +164,10 @@
     <ClInclude Include="Easy.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Hard.h" />
+    <ClInclude Include="InsertNumber.h" />
     <ClInclude Include="Medium.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="RemoveNumber.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

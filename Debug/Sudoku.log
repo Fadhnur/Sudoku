@@ -1,4 +1,5 @@
-﻿  Command.cpp
+﻿  RemoveNumber.cpp
   main.cpp
+D:\Repositories\Sudoku\main.cpp(13,9): warning C4101: 'b': unreferenced local variable
   Generating Code...
   Sudoku.vcxproj -> D:\Repositories\Sudoku\Debug\Sudoku.exe

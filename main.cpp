@@ -4,17 +4,29 @@
 #include <iostream>
 #include "GameManager.h"
 #include "Player.h"
+#include "Command.h"
+#include "InsertNumber.h"
+#include "RemoveNumber.h"
 
 int main(){
 	Player a;
+	Board* b;
 	GameManager newGame("medium", a);
-	newGame.getBoard().printBoard();
+	Command *c = new InsertNumber;
+	c->undo();
+	c->execute();
+
+	Command* d = new RemoveNumber;
+	d->undo();
+	d->execute();
+
+	/*newGame.getBoard().printBoard();
 	newGame.insertNumber(0,0,'9');
 	std::cout << std::endl << std::endl;
 	newGame.getBoard().printBoard();
 	std::cout << std::endl << std::endl;
 	newGame.removeNumber(0,0);
-	newGame.getBoard().printBoard();
+	newGame.getBoard().printBoard();*/
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
