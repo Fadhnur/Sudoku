@@ -1,3 +1,2 @@
-﻿  main.cpp
-D:\Repositories\Sudoku\main.cpp(14,9): warning C4101: 'b': unreferenced local variable
+﻿  InsertNumber.cpp
   Sudoku.vcxproj -> D:\Repositories\Sudoku\Debug\Sudoku.exe

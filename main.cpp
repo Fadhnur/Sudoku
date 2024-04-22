@@ -8,24 +8,30 @@
 #include "InsertNumber.h"
 #include "RemoveNumber.h"
 #include "CommandList.h"
+#include "Easy.h"
 
 int main(){
 	Player a;
-	Board* b;
+	ChallengeFactory g;
+	Board b = g.getChallenge("easy")->loadChallenge();
+	Board *h = &b;
+	std::cout << "Board asli " << std::endl << std::endl;
+	h->printBoard();
+	
 	GameManager newGame("medium", a);
-	Command *c = new InsertNumber;
-	Command* d = new RemoveNumber;
+	InsertNumber one(1, 2, '3', h);
+	Command *c = & one;
 
 	CommandList newCommand;
 	newCommand.PutCommand(c);
-	newCommand.PutCommand(d);
-	Command* e = newCommand.takeCommand();
-	e->undo();
-	e->execute();
 
-	Command* f = newCommand.takeCommand();
-	f->undo();
-	f->execute();
+	Command* e = newCommand.takeCommand();
+	e->execute();
+	std::cout << "Execute " << std::endl << std::endl;
+	h->printBoard();
+	e->undo();
+	std::cout << "Undo " << std::endl << std::endl;
+	h->printBoard();
 
 	/*newGame.getBoard().printBoard();
 	newGame.insertNumber(0,0,'9');

@@ -10,6 +10,7 @@ class InsertNumber : public Command{
 
 	public:
 		InsertNumber();
+		InsertNumber(int row, int col, char val, Board* chlg);
 		void undo();
 		void execute();
 };
