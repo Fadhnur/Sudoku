@@ -7,18 +7,25 @@
 #include "Command.h"
 #include "InsertNumber.h"
 #include "RemoveNumber.h"
+#include "CommandList.h"
 
 int main(){
 	Player a;
 	Board* b;
 	GameManager newGame("medium", a);
 	Command *c = new InsertNumber;
-	c->undo();
-	c->execute();
-
 	Command* d = new RemoveNumber;
-	d->undo();
-	d->execute();
+
+	CommandList newCommand;
+	newCommand.PutCommand(c);
+	newCommand.PutCommand(d);
+	Command* e = newCommand.takeCommand();
+	e->undo();
+	e->execute();
+
+	Command* f = newCommand.takeCommand();
+	f->undo();
+	f->execute();
 
 	/*newGame.getBoard().printBoard();
 	newGame.insertNumber(0,0,'9');
