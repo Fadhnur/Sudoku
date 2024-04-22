@@ -20,11 +20,11 @@ class GameManager{
 		Player getPlayer();
 		std::string getLevel();
 
-		void insertNumber(int rowNumber, int colNumber, char value);
+		void insertNumber(int rowNumber, int colNumber, char val);
 		void removeNumber(int rowNumber, int colNumber);
 
 		bool isWin();
-		bool isAvailable(int rowNumber, int colNumber, char value);
+		bool isAvailable(int rowNumber, int colNumber, char val);
 
 		void play();
 

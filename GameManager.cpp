@@ -28,8 +28,8 @@ std::string GameManager::getLevel(){
 	return level;
 }
 
-void GameManager::insertNumber(int rowNumber, int colNumber, char value){
-		challenge.setValue(rowNumber, colNumber, value);
+void GameManager::insertNumber(int rowNumber, int colNumber, char val){
+		challenge.setValue(rowNumber, colNumber, val);
 }
 
 void GameManager::removeNumber(int rowNumber, int colNumber){
@@ -41,4 +41,13 @@ bool GameManager::isWin(){
 		return true;
 	else
 		return false;
+}
+
+bool GameManager::isAvailable(int rowNumber, int colNumber, char val){
+	if (challenge.isFixed(rowNumber,colNumber) == true)
+		return false;
+	if (challenge.checkVertical(colNumber, val) == false || challenge.checkHorizontal(rowNumber, val) == false || challenge.checkRegional(rowNumber, colNumber, val) == false) {
+		return false;
+	}
+	return true;
 }
