@@ -144,6 +144,7 @@
     <ClCompile Include="Challenge.cpp" />
     <ClCompile Include="ChallengeFactory.cpp" />
     <ClCompile Include="ChallengeLoader.cpp" />
+    <ClCompile Include="Command.cpp" />
     <ClCompile Include="Easy.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Hard.cpp" />
@@ -157,6 +158,7 @@
     <ClInclude Include="Challenge.h" />
     <ClInclude Include="ChallengeFactory.h" />
     <ClInclude Include="ChallengeLoader.h" />
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Easy.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Hard.h" />

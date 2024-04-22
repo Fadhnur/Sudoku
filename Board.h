@@ -20,9 +20,9 @@ class Board{
         void reset();
         void printBoard();
 
-        bool checkVertical(int colNumber, char value);
-        bool checkHorizontal(int rowNumber, char value);
-        bool checkRegional(int rowNumber, int colNumber, char value);
+        bool checkVertical(int col, char val);
+        bool checkHorizontal(int row, char val);
+        bool checkRegional(int row, int col, char val);
         
         std::vector<std::vector<Cell>> getBoard();
 };

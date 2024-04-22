@@ -66,39 +66,39 @@ bool Board::isFull(){
 void Board::reset(){
     for (int i = 0; i < 9; ++i){
         for (int j = 0; j < 9; ++j){
-            cells[i][j].setValue(0);
+            cells[i][j].setValue('0');
             cells[i][j].setFixed(false);
         }
     }
 }
 
-bool Board::checkVertical(int colNumber, char value){
+bool Board::checkVertical(int col, char val){
     for (int i = 0; i < 9; ++i){
-        if (cells[i][colNumber].getValue() == value){
+        if (cells[i][col].getValue() == val){
             return false;
         }
     }
     return true;
 }
 
-bool Board::checkHorizontal(int rowNumber, char value){
+bool Board::checkHorizontal(int row, char val){
     for (int i = 0; i < 9; ++i) {
-        if (cells[rowNumber][i].getValue() == value) {
+        if (cells[row][i].getValue() == val) {
             return false;
         }
     }
     return true;
 }
 
-bool Board::checkRegional(int rowNumber, int colNumber, char value){
+bool Board::checkRegional(int row, int col, char val){
 
 
-    int startRow = rowNumber - rowNumber % 3;
-    int startCol = colNumber - colNumber % 3;
+    int startRow = row - row % 3;
+    int startCol = col - col % 3;
 
     for (int i = startRow; i < startRow + 3; ++i){
         for (int j = startCol; j < startCol + 3; ++j){
-            if (cells[i][j].getValue() == value){
+            if (cells[i][j].getValue() == val){
                 return false;
             }
         }
