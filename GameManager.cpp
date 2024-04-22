@@ -28,6 +28,14 @@ std::string GameManager::getLevel(){
 	return level;
 }
 
+void GameManager::insertNumber(int rowNumber, int colNumber, char value){
+		challenge.setValue(rowNumber, colNumber, value);
+}
+
+void GameManager::removeNumber(int rowNumber, int colNumber){
+		challenge.setValue(rowNumber, colNumber, '0');
+}
+
 bool GameManager::isWin(){
 	if (challenge.isFull() == true)
 		return true;

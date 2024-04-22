@@ -1,8 +1,8 @@
 #include "ChallengeLoader.h"
 
 Board ChallengeLoader::readFileToBoard(const std::string& filename){
-    Board output;
 
+    Board output;
     std::ifstream file(filename); // Open the file for input
 
     if (!file.is_open()) { // Check if the file opened successfully
